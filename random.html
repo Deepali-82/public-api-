@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-euiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="randomstyle.css">
+    <title>List</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    </head>
+    <body>
+        <h1>Randomizer Page</h1>
+        <div id="myapp">
+            <table class="tableapi">
+                <tr >
+                <th><h2>API</h2></th>
+                <th><h2>Description</h2></th>
+                <th><h2>Auth</h2></th>
+                <th><h2>HTTPS</h2></th>
+                <th><h2>CORS</h2></th>
+                <th><h2>Category</h2></th>
+                <th><h2>Website</h2></th>
+                </tr>
+                <tr v-bind="getrandom">
+                <td>{{getrandom.api}}</td>
+               <td>{{getrandom.description}}</td>
+                <td>{{getrandom.auth}}</td>
+                <td>{{getrandom.https}}</td>
+                <td>{{getrandom.cors}}</td>
+                <td>{{getrandom.category}}</td>
+                <td><a v-bind:href="getrandom.website">{{getrandom.website}}</td>
+                </tr>
+           </table> 
+           </div>
+           <br>
+         <button class="button" v-on:click="getrandom=getanotherrandom"><h2> Random Item</h2></button>
+         
+         <button class="button"><a href="index.html">Main Page</a></button>
+         
+        <script src="homeVue.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-euiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="detailpagestyle.css">
+     <title>List</title> 
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="myapp">
+        <h1>Public API Details</h1><br>
+        <div class="container">
+           
+               
+            
+                <table class="tableapi">
+                    <tr >
+                    <th><h2>API</h2></th>
+                    <th><h2>Description</h2></th>
+                    <th><h2>Auth</h2></th>
+                    <th><h2>HTTPS</h2></th>
+                    <th><h2>CORS</h2></th>
+                    <th><h2>Category</h2></th>
+                    <th>Website</th>
+                    </tr>
+                    
+                        <tr v-for="item in getentries">
+                        
+    
+                            <td>{{item.api}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.auth}}</td>
+                            <td>{{item.https}}</td>
+                            <td>{{item.cors}}</td>
+                            <td>{{item.category}}</td>
+                            <th><a v-bind:href="item.website">{{item.website}}</a></th>
+                        </tr>
+                </table> 
+               
+           </div>
+           
+        
+        </div>
+        <button class="button"><a href="index.html">Main Page</a></button>
+        <script src="homeVue.js"></script>
+    </body>
+</html>
